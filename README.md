@@ -1,2 +1,2 @@
-# FlorestMC-Wiki
-wiki.florestmc.ru
+# FlorestMC
+florestmc.ru
