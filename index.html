@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlorestMC • ЭПИЧНЫЙ СЕРВЕР</title>
+    <title>FlorestMC</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <style>
         :root{--neon:#00ffff;--space:#0a0a23;--star:#fff}
@@ -98,8 +98,8 @@
         </div>
 
         <div class="buttons">
-            <a href="minecraft://?addExternalServer=FlorestMC|java.florestmc.ru:20078" class="planet connect"><span>ИГРАТЬ<br>Java</span></a>
-            <a href="#" onclick="alert('Bedrock:\nIP: bedrock.florestmc.ru\nПорт: 20324')" class="planet connect"><span>ИГРАТЬ<br>Bedrock</span></a>
+            <a href="#" onclick="alert('IP: java.florestmc.ru (play.florestmc.ru:20078)')" class="planet connect"><span>ИГРАТЬ<br>в Java</span></a>
+            <a href="#" onclick="alert('IP: bedrock.florestmc.ru (play.florestmc.ru)\nПорт: 20324')" class="planet connect"><span>ИГРАТЬ в<br>Bedrock</span></a>
             <a href="http://map.florestmc.ru" target="_blank" class="planet map"><span>ЖИВАЯ<br>КАРТА</span></a>
             <a href="https://t.me/fmc_server" target="_blank" class="planet tg"><span>TELEGRAM<br>ЧАТ</span></a>
         </div>
@@ -127,8 +127,8 @@
         <div class="accordion info" id="info">
             <div class="acc-header" id="infoHeader">ИНФОРМАЦИЯ О ПРОЕКТЕ</div>
             <div class="acc-content" id="infoContent">
-                <p>Фанатский проект про <b>страны и выживание</b>. Большая история, ламповое сообщество, адекватная администрация — всё для твоего кайфа на сервере.</p>
-                <p>Сервер живёт с <b>2022 года</b> и по сей день. <b>Доната НЕТ</b> — только честная игра!</p>
+                <p>Фанатский проект про страны и выживание. Большая история, ламповое сообщество, адекватная администрация — всё для твоего кайфа на сервере.</p>
+                <p>Сервер живёт с 2022 года и по сей день. Доната НЕТ — только честная игра!</p>
                 <p>Простая процедура получения админки и прав. Десятки плагинов, чтобы не было скучно. Разнообразие ролей для каждого.</p>
                 <p>Чат в реальном времени — <a href="https://t.me/fmc_server" target="_blank">@fmc_server</a><br>
                    Карта онлайн — <a href="http://map.florestmc.ru" target="_blank">map.florestmc.ru</a></p>
@@ -168,7 +168,7 @@
         <div class="ip-block">
             <div class="ip-text" onclick="copyIP('java.florestmc.ru')">
                 java.florestmc.ru
-                <div class="copied">СКОПИРОВАНО!</div>
+                <div class="copied">Скопировано!</div>
             </div>
             <small style="display:block;margin-top:10px;opacity:0.8;">
                 Bedrock: <code>bedrock.florestmc.ru:20324</code><br>
@@ -207,7 +207,7 @@
 
         // Онлайн
         function updateOnline(){
-            fetch('https://api.mcsrvstat.us/3/java.florestmc.ru:20078')
+            fetch('https://api.mcsrvstat.us/3/play.florestmc.ru:20078')
                 .then(r=>r.json())
                 .then(d=>{
                     const c=d.players?.online??0;
