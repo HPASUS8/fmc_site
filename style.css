@@ -1,0 +1,31 @@
+:root{--neon:#00ffff;--space:#0a0a23;--star:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--space);color:#fff;font-family:'Montserrat',sans-serif;overflow-x:hidden;min-height:100vh;position:relative}
+.stars{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.star{position:absolute;background:var(--star);width:2px;height:2px;border-radius:50%;box-shadow:0 0 10px var(--neon);animation:fall linear infinite}
+@keyframes fall{0%{transform:translateY(-100vh);opacity:0}10%{opacity:1}100%{transform:translateY(100vh);opacity:0}}
+.container{position:relative;z-index:10;text-align:center;padding:40px 20px}
+h1{font-family:'Orbitron',sans-serif;font-size:4rem;text-shadow:0 0 30px var(--neon);margin:20px 0;letter-spacing:3px}
+nav{text-align:center;margin:30px 0;font-family:'Orbitron',sans-serif}
+nav a{color:var(--neon);margin:0 15px;text-decoration:none;transition:.3s}
+nav a:hover{text-shadow:0 0 15px var(--neon)}
+.accordion{max-width:800px;margin:40px auto;background:rgba(0,0,0,.6);border:2px solid var(--neon);
+border-radius:20px;padding:30px;box-shadow:0 0 40px rgba(0,255,255,.4);text-align:left}
+.accordion p, .accordion ol{font-size:1.1rem;line-height:1.8}
+.rules ol{counter-reset:rule;list-style:none;padding-left:0}
+.rules li{position:relative;padding-left:50px;margin:12px 0}
+.rules li::before{content:counter(rule);counter-increment:rule;position:absolute;left:0;top:0;
+width:34px;height:34px;background:var(--neon);color:#000;font-weight:900;border-radius:50%;
+display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 0 20px var(--neon)}
+.staff{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-top:30px}
+.person{text-align:center}
+.person img{width:120px;height:120px;border-radius:50%;border:4px solid var(--neon);
+box-shadow:0 0 30px var(--neon);transition:.4s}
+.person img:hover{transform:scale(1.15);box-shadow:0 0 50px var(--neon)}
+.person .name{font-family:'Orbitron',sans-serif;font-size:1.4rem;margin:15px 0 8px;text-shadow:0 0 15px var(--neon)}
+.person .role{font-size:1.1rem;opacity:.9}
+footer{margin-top:60px;padding:20px;font-size:1rem;opacity:.7;text-align:center}
+@media(max-width:768px){
+  h1{font-size:2.5rem}
+  .accordion{padding:20px}
+}
